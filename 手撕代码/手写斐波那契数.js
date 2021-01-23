@@ -4,7 +4,12 @@
  * @Author: wy
  * @Date: 2021年01月13日 11:05:28
  * @LastEditors: wy
- * @LastEditTime: 2021年01月13日 11:13:40
+ * @LastEditTime: 2021年01月23日 19:52:58
+ *   n   num
+ *   1   1
+ *   2   2
+ *   3   3
+ *   4   5
  */
 function fib(n) {
     if (n < 2) {
