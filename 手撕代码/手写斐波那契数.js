@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月13日 11:05:28
  * @LastEditors: wy
- * @LastEditTime: 2021年01月23日 19:52:58
+ * @LastEditTime: 2021年01月27日 21:32:18
  *   n   num
  *   1   1
  *   2   2
@@ -20,6 +20,7 @@ function fib(n) {
 }
 
 function dynfib(n) {
+    if (n === 0) return 0;
     let before = 1;
     let beforeLast = 1;
     let result = 1;
@@ -31,4 +32,4 @@ function dynfib(n) {
     return result;
 
 }
-console.log(dynfib(100));
+console.log(dynfib(0));
