@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月26日 14:46:29
  * @LastEditors: wy
- * @LastEditTime: 2021年01月26日 16:23:42
+ * @LastEditTime: 2021年01月28日 13:12:36
  */
 // 题目：
 // 编写一个函数， 其作用是将输入的字符串反转过来。 输入字符串以字符数组 char[] 的形式给出。
@@ -19,6 +19,6 @@
 var reverseString = function (s) {
     const len = s.length;
     for (let i = 0, j = s - 1; i < j; i++, j--) {
-        [s[i], s[j]] = [s[j], s[i]]
+        [s[i], s[j]] = [s[j], s[i]];
     }
 };
