@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月11日 13:21:20
  * @LastEditors: wy
- * @LastEditTime: 2021年01月11日 14:22:06
+ * @LastEditTime: 2021年02月15日 00:08:57
  */
 
 function ajax(method, url) {
@@ -25,3 +25,14 @@ function ajax(method, url) {
 ajax('get', 'www.baudu.com').then((response) => {
     console.log(response);
 })
+setTimeout(() => {
+    console.log(1);
+})
+new Promise(res => {
+    res();
+    console.log(2);
+
+}).then(() => {
+    console.log(3);
+})
+console.log(4);
