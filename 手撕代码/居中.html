@@ -1,0 +1,91 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: wy
+ * @Date: 2021年03月03日 13:22:48
+ * @LastEditors: wy
+ * @LastEditTime: 2021年03月03日 18:38:27
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平垂直居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: calc(100vw-70px);
+            height: 200px;
+            border: #3498db solid 1px;
+        }
+
+        .child {
+            height: 5vw;
+            width: 5vw;
+            background: #8e44ad;
+            border: #8e44ad solid 1px;
+        }
+
+        .margin-center {
+            margin: 0 auto;
+            vertical-align: middle;
+            line-height: 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 20px;
+
+        }
+
+        .flex-parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .transform-parent {
+            position: relative;
+
+        }
+
+        .transform-child {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        1. margin:0 auto;
+    </div>
+    <div class="parent">
+        <div class="child margin-center"></div>
+    </div>
+    <div class="title">
+        2. flex垂直居中
+    </div>
+    <div class="parent flex-parent">
+        <div class="child flex-child"></div>
+    </div>
+    <div class="title">
+        3. transform垂直居中
+    </div>
+    <div class="parent transform-parent ">
+        <div class="child transform-child"></div>
+    </div>
+
+</body>
+
+</html>
