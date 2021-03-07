@@ -1,0 +1,52 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: wy
+ * @Date: 2021年03月06日 13:37:11
+ * @LastEditors: wy
+ * @LastEditTime: 2021年03月06日 13:40:45
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现一个简单的三栏布局，左右各100px，中间自适应</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .parent {
+            display: flex;
+            /* justify-self: ; */
+            height: 200px;
+        }
+
+        .child1,
+        .child3 {
+            width: 100px;
+            background: red;
+        }
+
+        .child2 {
+            flex: 1;
+            background: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+    </div>
+</body>
+
+</html>
