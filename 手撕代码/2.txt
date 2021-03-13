@@ -1,0 +1,27 @@
+5  //几个矩阵
+3  //矩阵长宽为3
+xox
+oxo
+xox
+5 //矩阵长宽为5
+abbba
+babab
+bbabb
+babab
+abbba
+3 //矩阵长宽为3
+xox
+oxa
+xox
+5 //矩阵长宽为5
+abbba
+babab
+bbabb
+babab
+abdba
+5 //矩阵长宽为5
+abbba
+babab
+bbabb
+babab
+abbba
