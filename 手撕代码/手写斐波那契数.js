@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月13日 11:05:28
  * @LastEditors: wy
- * @LastEditTime: 2021年01月27日 21:32:18
+ * @LastEditTime: 2021年03月15日 15:25:28
  *   n   num
  *   1   1
  *   2   2
@@ -28,7 +28,7 @@ function dynfib(n) {
         result = before + beforeLast;
         before = beforeLast;
         beforeLast = result;
-    }
+    }.WQawwswdcz
     return result;
 
 }
