@@ -1,0 +1,76 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: wy
+ * @Date: 2021年03月16日 14:57:21
+ * @LastEditors: wy
+ * @LastEditTime: 2021年03月16日 15:06:05
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parent {
+        display: flex;
+        width: 180px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .child {
+        width: 50px;
+        height: 50px;
+        border: blue solid 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: -5px;
+        margin-bottom: -5px; */
+    }
+
+    .child:hover {
+        border: red solid 1px;
+        z-index: 1;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+
+    </div>
+</body>
+
+
+</html>

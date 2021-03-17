@@ -27,7 +27,7 @@ function promiseAll(promises) {
             )
         });
     })
-}
+}                      
 
 // 函数返回的是一个 promise
 let fn1 = function () {

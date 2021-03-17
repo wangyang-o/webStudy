@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月11日 13:21:20
  * @LastEditors: wy
- * @LastEditTime: 2021年02月15日 00:08:57
+ * @LastEditTime: 2021年03月16日 11:11:02
  */
 
 function ajax(method, url) {
@@ -36,3 +36,21 @@ new Promise(res => {
     console.log(3);
 })
 console.log(4);
+
+function ajax(method, url) {
+    return new Promise((reslove, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == 4) {
+                if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                    reslove(xhr.response);
+                } else {
+                    reject(xhr.status);
+                }
+            }
+
+        }
+    })
+
+}
