@@ -4,21 +4,24 @@
  * @Author: wy
  * @Date: 2021年01月12日 15:44:13
  * @LastEditors: wy
- * @LastEditTime: 2021年02月01日 23:53:37
+ * @LastEditTime: 2021年03月23日 12:37:11
  */
 function promiseAll(promises) {
-    return new Promise((reslove, reject) => {
+    return new Promise((resolve, reject) => {
         const result = [];
+        let counter = 0;
+        let len = promises.length;
         if (!Array.isArray(promises)) {
             reject('error');
         }
         promises.forEach((item, index) => {
-            item.then(
+            Promise.resolve(item).then(
                 res => {
                     // 保证先后顺序
                     result[index] = res;
-                    if (result.length === promises.length) {
-                        reslove(result);
+                    counter++;
+                    if (counter === len) {
+                        resolve(result);
                     }
                 },
                 rej => {
@@ -27,14 +30,14 @@ function promiseAll(promises) {
             )
         });
     })
-}                      
+}
 
 // 函数返回的是一个 promise
 let fn1 = function () {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve('fn1');
-        }, 400)
+        }, 500)
     })
 }
 let fn2 = function (fn) {
@@ -45,9 +48,34 @@ let fn2 = function (fn) {
     })
 }
 
-promiseAll([fn1(), fn2()]).then(res => {
+myPromiseAll([fn1(), fn2()]).then(res => {
     console.log(res); // [ 'fn1', 'fn2' ]
 }, rej => {
     console.log(rej); // [ 'fn1', 'fn2' ]
 
 })
+
+function myPromiseAll(promises) {
+
+    return new Promise((resolve, reject) => {
+        if (!Array.isArray(promises)) {
+            reject('error');
+        }
+        let count = 0;
+        const result = [];
+        let len = promises.length;
+        promises.forEach((item, index) => {
+            Promise.resolve(item).then(
+                res => {
+                    count++;
+                    result[index] = res;
+                    if (count === len) {
+                        resolve(result);
+                    }
+                },
+                rej => {
+                    reject(rej);
+                })
+        });
+    })
+}

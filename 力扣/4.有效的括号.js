@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月26日 14:44:10
  * @LastEditors: wy
- * @LastEditTime: 2021年01月26日 14:45:00
+ * @LastEditTime: 2021年03月23日 16:40:12
  */
 // 题目：
 // 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
@@ -18,7 +18,7 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function (s) {
+var isValid1 = function (s) {
     const len = s.length;
     if (len % 2 === 1) {
         return false;
@@ -43,3 +43,29 @@ var isValid = function (s) {
     }
     return !stk.length;
 };
+const isValid = (s) => {
+    let len = s.length;
+    if (len % 2 === 1) {
+        return false;
+    }
+    const stk = [];
+    myMap = new Map([
+        ['}', '{'],
+        [']', '['],
+        [')', '('],
+    ])
+    for (let i = 0; i < len; i++) {
+        if (myMap.has(s[i])) {
+            if (stk[stk.length - 1] !== myMap.get(s[i])) {
+                return false
+            } else {
+                stk.pop();
+            }
+
+        } else {
+            stk.push(s[i])
+        }
+    }
+    return !stk.length
+}
+console.log(isValid('[](){}{}'));
