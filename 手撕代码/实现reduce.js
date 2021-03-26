@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年03月16日 11:12:07
  * @LastEditors: wy
- * @LastEditTime: 2021年03月16日 20:58:43
+ * @LastEditTime: 2021年03月26日 13:40:10
  */
 /*
  * @Descripttion: 
@@ -29,3 +29,5 @@ let res = arr.myReduce((total, currentValue, currentIndex, arr) => {
     return total + currentValue
 }, 10)
 console.log(res);
+
+
