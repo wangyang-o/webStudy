@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wy
  * @Date: 2021年01月12日 12:43:45
- * @LastEditors: wy
- * @LastEditTime: 2021年03月06日 14:20:09
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021年04月09日
  */
 flatten = arr => {
     return arr.reduce((pre, cur) => {
@@ -26,3 +26,19 @@ flatten1 = (arr) => {
     }
     return res;
 }
+// 带参数
+Array.prototype._flat = function (deep) {
+    let arr = this;
+    if (deep == 0) {
+        return arr;
+    }
+    let res = arr.reduce((pre, cur) => {
+        return pre.concat(Array.isArray(cur) ? cur._flat(deep--) : cur);
+    }, [])
+    return res;
+}
+console.log([1, [2, 3],
+    [
+        [4, 5, 6]
+    ]
+]._flat(1))

@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年03月03日 13:22:48
  * @LastEditors: wy
- * @LastEditTime: 2021年03月16日 15:20:39
+ * @LastEditTime: 2021年04月07日 13:50:02
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +24,7 @@
             width: calc(100vw-70px);
             height: 200px;
             border: #3498db solid 1px;
+
         }
 
         .child {
@@ -33,11 +34,18 @@
             border: #8e44ad solid 1px;
         }
 
-        .margin-center {
-            margin: 0 auto;
+        .wp {
+            line-height: 200px;
+            text-align: center;
+            border: #3498db solid 1px;
 
+        }
+
+        .line-center {
+            margin: 0 auto;
+            display: inline-block;
+            /* 垂直居中 */
             vertical-align: middle;
-            line-height: 20px;
         }
 
         .title {
@@ -70,11 +78,14 @@
 
 <body>
     <div class="title">
-        1. margin:0 auto;
+        1. margin:0 auto;加line-hight
     </div>
-    <div class="parent">
-        <div class="child margin-center"></div>
+    <div class="wp">
+        <div class="child line-center"></div>
     </div>
+
+
+
     <div class="title">
         2. flex垂直居中
     </div>

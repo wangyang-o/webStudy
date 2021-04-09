@@ -4,7 +4,7 @@
  * @Author: wy
  * @Date: 2021年01月13日 10:44:49
  * @LastEditors: wy
- * @LastEditTime: 2021年03月25日 19:59:47
+ * @LastEditTime: 2021年03月31日 17:47:38
  */
 
 // Function.prototype.myCall = function (context, ...args) {
@@ -37,4 +37,8 @@ Function.prototype.myCall = function (context, ...args) {
     result = context[key](...args);
     delete context[key];
     return result;
+}
+
+const obj1 = {
+    name: 'wy'
 }
