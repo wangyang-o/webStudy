@@ -1,11 +1,11 @@
 /*
- * @Descripttion: 柯里化
+ * @Descripttion: 柯里化：1.延迟执行，2.参数复用
  * @version: 
  * @Author: wy
  * @Date: 2021年01月11日 15:58:25
- * @LastEditors: wy
- * @LastEditTime: 2021年02月07日 15:38:31
+ * @LastEditTime: 2021年04月12日
  */
+
 function currying(fn, ...args) {
     if (args.length >= fn.length) {
         return fn(...args);

@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wy
  * @Date: 2021年01月22日 21:26:45
- * @LastEditors: wy
- * @LastEditTime: 2021年03月26日 12:46:41
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021年04月12日
  */
 
 // 题目：
@@ -25,7 +25,7 @@
  * @return {ListNode}
  */
 var reverseList = function (head) {
-    let = null;
+    let pre= null;
     let cur = head;
     while (cur) {
         let next = cur.next;
