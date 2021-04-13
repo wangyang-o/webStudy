@@ -3,8 +3,8 @@
  * @version: 
  * @Author: wy
  * @Date: 2021年01月11日 13:21:20
- * @LastEditors: wy
- * @LastEditTime: 2021年03月16日 11:11:02
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021年04月13日
  */
 
 function ajax(method, url) {
@@ -36,6 +36,11 @@ new Promise(res => {
     console.log(3);
 })
 console.log(4);
+
+async function a() {
+    const d = (await 'ss').reject('error');
+    console.log(d);
+}
 
 function ajax(method, url) {
     return new Promise((reslove, reject) => {
